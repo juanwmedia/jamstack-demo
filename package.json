@@ -10,5 +10,8 @@
     "nuxt": "^2.15.4",
     "@nuxtjs/tailwindcss": "^4.0.3",
     "postcss": "^8.2.9"
+  },
+  "dependencies": {
+    "storyblok-nuxt": "^1.3.1"
   }
 }

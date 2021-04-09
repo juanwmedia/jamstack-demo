@@ -1,7 +1,11 @@
 <template>
   <div>
-    <AppHeader />
-    <Nuxt />
+    <nuxt-link to="/">
+      <AppHeader />
+    </nuxt-link>
+    <div class="container">
+      <Nuxt />
+    </div>
     <AppFooter />
   </div>
 </template>
