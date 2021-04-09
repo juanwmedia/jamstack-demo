@@ -2,7 +2,10 @@
   <div>
     <div class="mb-3" v-for="(post, $index) in posts" :key="$index">
       <h3 class="text-xl">{{ post.title }}</h3>
-      <p>{{ postExcerpt(post.content) }}</p>
+
+      <nuxt-link :to="postLink(post)">
+        <p>{{ postExcerpt(post.content) }}</p>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -19,6 +22,9 @@
     methods: {
       postExcerpt(post) {
         return post.substring(0, 255) + "...";
+      },
+      postLink(post) {
+        return `/posts/${post.slug}`;
       },
     },
   };
