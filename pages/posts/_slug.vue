@@ -3,7 +3,8 @@
       <h1 class="text-2xl mb-3">
           {{ story.content.title }}
       </h1>
-      <p>{{ story.content.content }} </p>
+      <p v-if="$store.state.user">{{ story.content.content }} </p>
+      <p v-else>Please login to access the content</p>
   </div>
 </template>
 <script>
