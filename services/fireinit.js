@@ -2,7 +2,7 @@ import firebase from "firebase/app";
 import "firebase/auth";
 
 var config = {
-  apiKey: "AIzaSyCII92FAHzvGYizpWcsYUL9qSX_6KO1pq0",
+  apiKey: process.env.FIREBASE_API_KEY, 
   authDomain: "jamstack-demo-83cf8.firebaseapp.com",
   projectId: "jamstack-demo-83cf8",
   storageBucket: "jamstack-demo-83cf8.appspot.com",

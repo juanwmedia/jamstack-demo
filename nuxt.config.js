@@ -14,12 +14,13 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     "@nuxtjs/tailwindcss",
+    "@nuxtjs/dotenv"
   ],
   modules: [
     [
       "storyblok-nuxt",
       {
-        accessToken: "w2rZfyJCUykSb5BAMm4mAQtt",
+        accessToken: process.env.STORYBLOK_TOKEN,
         cacheProvider: "memory",
       },
     ],
